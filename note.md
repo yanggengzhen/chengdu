@@ -42,7 +42,12 @@ exit 0
 #链接文件
 sudo ln  -s /lib/systemd/system/rc.local.service /etc/systemd/system/
 
+#python3使用requests爬网页
+import requests
 
+r=requests.get('http://www.baidu.com')
+r.decoding='utf8'  #解决乱码问题
+print(r.text)
 
 
 
